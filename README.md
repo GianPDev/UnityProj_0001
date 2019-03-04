@@ -1,5 +1,8 @@
-UnityProj_0001
+# UnityProj_0001
 ==============
+First Empty Unity Project.
+
+GUIs are scary. Where's my code and command line? ._.
 
 Main goal was to recreate aiming at an angle from my Haxeflixel project.
 
