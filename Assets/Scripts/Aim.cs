@@ -70,7 +70,7 @@ public class Aim : MonoBehaviour {
         }
         if (Input.GetMouseButton(0))
         {
-            pos = Input.mousePosition;
+            pos = cam.ScreenToWorldPoint(Input.mousePosition);
             pos.z = 1;
 
             float dx = pos.x - gameObject.transform.position.x;
@@ -82,8 +82,10 @@ public class Aim : MonoBehaviour {
 
 
             Vector3 targetPos = new Vector3(
-                    (gameObject.transform.position.x) + (50 * Mathf.Cos(aimAngle)),
-                    (gameObject.transform.position.y) + (50 * Mathf.Sin(aimAngle)), 1);
+                    //(gameObject.transform.position.x) + (50 * Mathf.Cos(aimAngle)),
+                    (50 * Mathf.Cos(aimAngle)),
+                    //(gameObject.transform.position.y) + (50 * Mathf.Sin(aimAngle)), 1);
+                    (50 * Mathf.Sin(aimAngle)), 1);
             Debug.Log("targetPos: " + targetPos);
             target.transform.position = cam.ScreenToWorldPoint(targetPos);
             
